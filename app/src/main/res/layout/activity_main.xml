@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:onClick="AddA"
+        android:id="@+id/button_add_a"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="2dp"
+        android:text="Add A" />
+
+    <Button
+        android:onClick="AddB"
+        android:id="@+id/button_add_b"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="1dp"
+        android:text="Add B" />
+
+    <Button
+        android:onClick="AddC"
+        android:id="@+id/button_add_c"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="97dp"
+        android:text="Add C" />
+
+    <Button
+        android:onClick="Back"
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="0dp"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/button_remove_a"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:onClick="RemoveA"
+        android:text="Remove A" />
+
+    <Button
+        android:onClick="RemoveB"
+        android:id="@+id/button_remove_b"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="50dp"
+        android:text="Remove B" />
+
+    <Button
+        android:onClick="RemoveC"
+        android:id="@+id/button_remove_c"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="97dp"
+        android:text="Remove C" />
+
+    <Button
+        android:onClick="PopA"
+        android:id="@+id/button_pop_a"
+        android:layout_width="88dp"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="0dp"
+        android:text="POP A" />
+
+    <FrameLayout
+        android:layout_below="@id/button_remove_a"
+        android:id="@+id/framelayout_contain_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
