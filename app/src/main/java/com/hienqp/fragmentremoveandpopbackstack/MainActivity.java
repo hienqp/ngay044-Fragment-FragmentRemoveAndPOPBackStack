@@ -20,18 +20,21 @@ public class MainActivity extends AppCompatActivity {
     public void AddA(View view) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.framelayout_contain_fragment, new AFragment(), "fragA");
+        fragmentTransaction.addToBackStack("aaa");
         fragmentTransaction.commit();
     }
 
     public void AddB(View view) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.framelayout_contain_fragment, new BFragment(), "fragB");
+        fragmentTransaction.addToBackStack("bbb");
         fragmentTransaction.commit();
     }
 
     public void AddC(View view) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.framelayout_contain_fragment, new CFragment(), "fragC");
+        fragmentTransaction.addToBackStack("ccc");
         fragmentTransaction.commit();
     }
 
@@ -66,5 +69,22 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Fragment C chưa được thêm vào !!!", Toast.LENGTH_SHORT).show();
         } 
+    }
+
+    public void Back(View view) {
+        getFragmentManager().popBackStack();
+    }
+
+    public void PopA(View view) {
+        getFragmentManager().popBackStack("aaa", 0);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() > 0) {
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
+        }
     }
 }

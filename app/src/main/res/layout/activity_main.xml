@@ -83,7 +83,6 @@
         android:text="Remove C" />
 
     <Button
-        android:onClick="PopA"
         android:id="@+id/button_pop_a"
         android:layout_width="88dp"
         android:layout_height="55dp"
@@ -91,6 +90,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="0dp"
+        android:onClick="PopA"
         android:text="POP A" />
 
     <FrameLayout
