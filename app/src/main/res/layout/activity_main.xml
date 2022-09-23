@@ -94,8 +94,8 @@
         android:text="POP A" />
 
     <FrameLayout
-        android:layout_below="@id/button_remove_a"
         android:id="@+id/framelayout_contain_fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/button_remove_a" />
 </RelativeLayout>
